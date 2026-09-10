@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NGL - Kirim Pesan Anonim</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['Inter', 'sans-serif'] },
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-white font-sans antialiased">
+
+    <!-- Navbar -->
+    <nav class="fixed w-full z-50 top-0">
+        <div class="max-w-6xl mx-auto flex items-center justify-between px-6 py-4">
+            <div class="flex items-center gap-2">
+                <div class="w-10 h-10 bg-gradient-to-br from-violet-600 to-indigo-600 rounded-2xl flex items-center justify-center shadow-lg shadow-indigo-200">
+                    <span class="text-white font-black text-base">NGL</span>
+                </div>
+            </div>
+            <div class="flex items-center gap-3">
+                <a href="/login" class="text-gray-600 hover:text-gray-900 text-sm font-medium transition py-2 px-4">Login</a>
+                <a href="/register" class="bg-gradient-to-r from-violet-600 to-indigo-600 hover:from-violet-700 hover:to-indigo-700 text-white text-sm font-semibold py-2.5 px-6 rounded-full transition-all duration-200 shadow-lg shadow-indigo-200 hover:shadow-xl hover:shadow-indigo-300">Register</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="pt-32 pb-24 px-6 relative overflow-hidden">
+        <!-- Background decoration -->
+        <div class="absolute top-20 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-gradient-to-r from-violet-400/20 to-indigo-400/20 rounded-full blur-3xl"></div>
+
+        <div class="max-w-4xl mx-auto text-center relative">
+            <div class="inline-flex items-center gap-2 bg-indigo-50 text-indigo-700 text-xs font-semibold px-4 py-2 rounded-full mb-8">
+                <span class="w-2 h-2 bg-indigo-500 rounded-full animate-pulse"></span>
+                Anonymous & Secure
+            </div>
+
+            <h1 class="text-6xl md:text-7xl font-black text-gray-900 leading-tight mb-6">
+                Kirim Pesan<br>
+                <span class="bg-gradient-to-r from-violet-600 to-indigo-600 bg-clip-text text-transparent">Anonim</span>
+            </h1>
+
+            <p class="text-lg text-gray-500 max-w-xl mx-auto mb-10 leading-relaxed">
+                Kirim dan terima pesan anonim dari siapa saja. Tanpa nama, tanpa identitas — jujur dan bebas.
+            </p>
+
+            <div class="flex items-center justify-center gap-4">
+                <a href="/register" class="bg-gradient-to-r from-violet-600 to-indigo-600 hover:from-violet-700 hover:to-indigo-700 text-white font-bold py-4 px-10 rounded-full text-base transition-all duration-200 shadow-xl shadow-indigo-200 hover:shadow-2xl hover:shadow-indigo-300 hover:-translate-y-0.5">
+                    Mulai Sekarang →
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Fitur -->
+    <section class="py-24 px-6 bg-gray-50">
+        <div class="max-w-5xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-gray-900 mb-3">Kenapa Pakai NGL?</h2>
+                <p class="text-gray-500">Fitur yang bikin pengalaman kamu lebih seru</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-6">
+                <div class="bg-white rounded-3xl p-8 shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border border-gray-100">
+                    <div class="w-14 h-14 bg-violet-100 rounded-2xl flex items-center justify-center text-2xl mb-5">🎭</div>
+                    <h3 class="text-lg font-bold text-gray-900 mb-2">100% Anonim</h3>
+                    <p class="text-gray-500 text-sm leading-relaxed">Pesan dikirim tanpa identitas. Pengirim tidak akan diketahui oleh siapa pun.</p>
+                </div>
+
+                <div class="bg-white rounded-3xl p-8 shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border border-gray-100">
+                    <div class="w-14 h-14 bg-indigo-100 rounded-2xl flex items-center justify-center text-2xl mb-5">🔗</div>
+                    <h3 class="text-lg font-bold text-gray-900 mb-2">Link Pribadi</h3>
+                    <p class="text-gray-500 text-sm leading-relaxed">Dapatkan link unik milikmu. Bagikan ke siapa saja untuk menerima pesan anonim.</p>
+                </div>
+
+                <div class="bg-white rounded-3xl p-8 shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border border-gray-100">
+                    <div class="w-14 h-14 bg-purple-100 rounded-2xl flex items-center justify-center text-2xl mb-5">📩</div>
+                    <h3 class="text-lg font-bold text-gray-900 mb-2">Inbox Mudah</h3>
+                    <p class="text-gray-500 text-sm leading-relaxed">Lihat semua pesan masuk di dashboard. Terima pesan kapan saja, dari siapa saja.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cara Kerja -->
+    <section class="py-24 px-6">
+        <div class="max-w-5xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-gray-900 mb-3">Cara Kerja</h2>
+                <p class="text-gray-500">Tiga langkah mudah untuk memulai</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-gradient-to-br from-violet-600 to-indigo-600 rounded-2xl flex items-center justify-center text-white text-2xl font-black mx-auto mb-5 shadow-lg shadow-indigo-200">1</div>
+                    <h3 class="text-lg font-bold text-gray-900 mb-2">Daftar Akun</h3>
+                    <p class="text-gray-500 text-sm">Buat akun NGL gratis dalam hitungan detik.</p>
+                </div>
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-gradient-to-br from-violet-600 to-indigo-600 rounded-2xl flex items-center justify-center text-white text-2xl font-black mx-auto mb-5 shadow-lg shadow-indigo-200">2</div>
+                    <h3 class="text-lg font-bold text-gray-900 mb-2">Bagikan Link</h3>
+                    <p class="text-gray-500 text-sm">Salin link pribadimu dan bagikan ke teman atau followers.</p>
+                </div>
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-gradient-to-br from-violet-600 to-indigo-600 rounded-2xl flex items-center justify-center text-white text-2xl font-black mx-auto mb-5 shadow-lg shadow-indigo-200">3</div>
+                    <h3 class="text-lg font-bold text-gray-900 mb-2">Terima Pesan</h3>
+                    <p class="text-gray-500 text-sm">Orang lain mengirim pesan anonim kepadamu.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="py-24 px-6">
+        <div class="max-w-4xl mx-auto">
+            <div class="bg-gradient-to-r from-violet-600 to-indigo-600 rounded-[2rem] p-12 text-center text-white relative overflow-hidden">
+                <div class="absolute top-0 right-0 w-64 h-64 bg-white/10 rounded-full -translate-y-1/2 translate-x-1/2"></div>
+                <div class="absolute bottom-0 left-0 w-48 h-48 bg-white/10 rounded-full translate-y-1/2 -translate-x-1/2"></div>
+                <div class="relative">
+                    <h2 class="text-3xl font-bold mb-4">Siap Menerima Pesan Anonim?</h2>
+                    <p class="text-indigo-100 mb-8">Daftar sekarang dan mulai bagikan link NGL-mu!</p>
+                    <a href="/register" class="inline-block bg-white text-indigo-700 font-bold py-4 px-10 rounded-full hover:bg-gray-100 transition-all duration-200 shadow-xl hover:shadow-2xl hover:-translate-y-0.5">
+                        Register Gratis →
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="border-t border-gray-100 py-8 text-center">
+        <p class="text-gray-400 text-sm">&copy; 2026 NGL — Built with 💜</p>
+    </footer>
+
+</body>
+</html>

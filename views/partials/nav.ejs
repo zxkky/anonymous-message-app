@@ -1,0 +1,16 @@
+<nav class="bg-white/80 backdrop-blur-md border-b border-gray-200 fixed w-full z-50 top-0">
+    <div class="max-w-5xl mx-auto flex items-center justify-between px-6 py-3">
+        <a href="/beranda" class="flex items-center gap-2">
+            <div class="w-9 h-9 bg-gradient-to-br from-violet-600 to-indigo-600 rounded-xl flex items-center justify-center shadow-lg shadow-indigo-200">
+                <span class="text-white font-black text-sm">NGL</span>
+            </div>
+        </a>
+        <div class="flex items-center gap-1">
+            <a href="/beranda" class="text-gray-600 hover:text-gray-900 hover:bg-gray-100 py-2 px-4 rounded-xl text-sm font-medium transition-all duration-200">Beranda</a>
+            <a href="/profile" class="text-gray-600 hover:text-gray-900 hover:bg-gray-100 py-2 px-4 rounded-xl text-sm font-medium transition-all duration-200">Profile</a>
+            <form action="/logout" method="POST" class="inline">
+                <button type="submit" class="text-gray-600 hover:text-red-600 hover:bg-red-50 py-2 px-4 rounded-xl text-sm font-medium transition-all duration-200 cursor-pointer">Logout</button>
+            </form>
+        </div>
+    </div>
+</nav>

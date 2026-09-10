@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Send Message to @<%= username %></title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['Inter', 'sans-serif'] },
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-gray-50 font-sans antialiased min-h-screen flex items-center justify-center px-4">
+
+    <div class="w-full max-w-md">
+        <!-- Logo -->
+        <div class="text-center mb-6">
+            <div class="w-12 h-12 bg-gradient-to-br from-violet-600 to-indigo-600 rounded-2xl flex items-center justify-center shadow-lg shadow-indigo-200 mx-auto mb-4">
+                <span class="text-white font-black text-sm">NGL</span>
+            </div>
+        </div>
+
+        <!-- Card -->
+        <div class="bg-white rounded-3xl shadow-sm border border-gray-100 p-8">
+            <!-- Avatar -->
+            <div class="text-center mb-6">
+                <img src="https://ui-avatars.com/api/?name=<%= username %>&background=6366f1&color=fff&size=128&bold=true"
+                     alt="<%= username %>" class="w-20 h-20 rounded-2xl mx-auto mb-4 shadow-lg">
+                <p class="text-sm text-gray-500">Kirim pesan anonim ke</p>
+                <h1 class="text-xl font-bold text-gray-900">@<%= username %></h1>
+            </div>
+
+            <% if (sent) { %>
+                <!-- Success State -->
+                <div class="bg-green-50 border border-green-200 rounded-2xl p-8 text-center">
+                    <div class="text-5xl mb-3">✅</div>
+                    <p class="text-green-700 font-bold text-lg">Terkirim!</p>
+                    <p class="text-green-600 text-sm mt-1">Pesan anonim kamu sudah dikirim.</p>
+                    <a href="/<%= username %>" class="inline-block mt-5 text-sm font-semibold text-indigo-600 hover:underline">Kirim lagi →</a>
+                </div>
+            <% } else { %>
+                <!-- Form -->
+                <form action="/<%= username %>" method="POST">
+                    <textarea name="message" rows="4" required
+                        class="w-full border border-gray-200 rounded-2xl p-4 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent resize-none transition bg-gray-50 focus:bg-white"
+                        placeholder="Ketik pesan anonim kamu di sini..."></textarea>
+                    <button type="submit"
+                        class="w-full mt-4 bg-gradient-to-r from-violet-600 to-indigo-600 hover:from-violet-700 hover:to-indigo-700 text-white font-bold py-3.5 px-4 rounded-2xl transition-all duration-200 shadow-lg shadow-indigo-200 hover:shadow-xl">
+                        Kirim Pesan 📩
+                    </button>
+                </form>
+            <% } %>
+        </div>
+
+        <p class="text-center text-xs text-gray-400 mt-6">Powered by NGL</p>
+    </div>
+
+</body>
+</html>
